@@ -1,0 +1,152 @@
+[
+  {
+    "file": "R29_K_read.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "展卷细读",
+    "source_layer": "R25_lip_xiao",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  },
+  {
+    "file": "R29_K_brush.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "拈笔笺注",
+    "source_layer": "R26_J_read",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  },
+  {
+    "file": "R29_K_compare.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "两卷并读",
+    "source_layer": "R26_J_compare",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  },
+  {
+    "file": "R29_K_pause.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "停云凝思",
+    "source_layer": "R25_I_zhu",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  },
+  {
+    "file": "R29_K_ah.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "恍然得句",
+    "source_layer": "R26_J_startled",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  },
+  {
+    "file": "R29_K_cup.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "金荷酌客",
+    "source_layer": "R23_build_yi",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  },
+  {
+    "file": "R29_K_bridge.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "长桥题壁",
+    "source_layer": "R26_J_turn",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  },
+  {
+    "file": "R29_K_check.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "指认异文",
+    "source_layer": "G_cost_verify",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  },
+  {
+    "file": "R29_K_smile.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "会心",
+    "source_layer": "R25_lip_zhu",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  },
+  {
+    "file": "R29_K_done.png",
+    "dst_intent": "Image2Image",
+    "input_images": [
+      {
+        "type": "sandbox",
+        "value": "/data/workspace/anim4/_style_ref.png"
+      }
+    ],
+    "seed": 3,
+    "image_ratio": "1:1",
+    "expr": "合卷落印",
+    "source_layer": "R26_J_done",
+    "note": "待 AI 重画；当前由程序化情境变体占位"
+  }
+]

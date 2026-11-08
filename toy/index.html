@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-skin="paper">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./style1.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover">
+<title>杯雪 · 互动游戏集</title>
+<link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+<a class="skip" href="#app">跳到主要内容</a>
+<div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+<header>
+ <div class="brand">
+  <div class="seal" aria-hidden="true">杯雪</div>
+  <div><h1>杯雪 · 游戏总站</h1>
+  <div class="sub">二十四关　·　七卷　·　四模式　·　三档难度　·　单文件离线</div></div>
+ </div>
+ <div class="hctl">
+  <button id="landBtn" class="landbtn" data-act="land" aria-pressed="false"
+   title="一键进入横屏：全屏并尝试锁定方向；也可不转手机直接套横屏版式">⛶ 横屏</button>
+  <button id="progChip" data-act="go" data-v="hall" title="关卡进度">★ 0/72</button>
+  <button id="bgmBtn" data-act="bgm" title="场景音：关 → 随场景自动换音景 → 音景＋琴音（与音效互不影响）">♫ 场景音·关</button>
+  <button id="settingsBtn" class="settingsbtn" data-act="settings" aria-haspopup="dialog"
+   title="打开独立设置界面：四张卡、可展开的模式与难度、显眼关闭按钮、内容可拖动">⚙ 设置</button>
+ </div>
+ <div id="modePanel" class="modepanel" hidden></div>
+ <div id="diffPanel" class="modepanel" hidden></div>
+ <div id="skinPanel" class="modepanel skinpanel" hidden></div>
+</header>
+<div id="a11yPanel" class="modepanel a11ypanel" hidden></div>
+<nav id="nav" aria-label="游戏与档案页签"></nav>
+<div id="landTip" class="landtip" hidden role="status" aria-live="polite"></div>
+<main id="app" role="main" tabindex="-1"></main>
+
+<div id="bxViewer" class="bxviewer" hidden>
+ <div class="bxvtop">
+  <div class="bxvline"><span class="bxvlabel" id="bxvLabel">图片查看</span>
+   <button class="bxvclose" data-act="viewer_close" aria-label="关闭查看器">✕ 关闭</button></div>
+  <div class="bxvline bxvbtns">
+   <button data-act="viewer_out" aria-label="缩小">－</button>
+   <button data-act="viewer_reset" aria-label="两层一起复位">⤾ 复位</button>
+   <button data-act="viewer_in" aria-label="放大">＋</button>
+   <span class="bxvmini">单指拖场景/立绘 · 双指缩放 · 长按选场景或表情</span></div>
+ </div>
+ <div class="bxvstage" id="bxvStage">
+  <div class="vbg" id="vBg"></div><div class="vcut" id="vCut"></div>
+  <img id="bxvImg" alt="可缩放图片">
+  <div class="vhit vhit-bg" id="vHitBg" aria-label="长按选场景，拖动可平移场景"></div>
+  <div class="vhit vhit-cast" id="vHitCast" aria-label="长按选人物表情，拖动可移动立绘"></div>
+ </div>
+ <div class="vpicker" id="vPicker" hidden></div>
+ <div class="bxvhint">场景与立绘各自独立拖动 · 长按各自弹选择 · 双击两层复位</div>
+</div>
+<footer id="foot"></footer>
+
+<script src="./data.js"></script>
+<script src="./app1.js"></script>
+</body>
+</html>

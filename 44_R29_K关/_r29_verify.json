@@ -1,0 +1,64 @@
+{
+  "K": {
+    "slots": 10,
+    "allInART": true,
+    "names": [
+      "萧如",
+      "易敛",
+      "易敛",
+      "朱妍",
+      "易敛",
+      "易敛",
+      "易敛",
+      "易敛",
+      "朱妍",
+      "易敛"
+    ],
+    "fallbackHashi": 0,
+    "stage": {
+      "bg": "qinhuai",
+      "cast": "R29_K_read"
+    },
+    "art": 239
+  },
+  "allLevels": {
+    "count": 24,
+    "bad": []
+  },
+  "store": {
+    "schema": 1,
+    "scanned": 0,
+    "bad": [],
+    "ok": true
+  },
+  "audio": [
+    null,
+    null
+  ],
+  "overflow_portrait": {
+    "sw": 420,
+    "cw": 420
+  },
+  "K_stage": {
+    "hasCut": true,
+    "art": "R29_K_read",
+    "who": "萧如 · 展卷细读"
+  },
+  "r28_night": {
+    "bg": "rgb(36, 30, 44)",
+    "color": "rgb(255, 248, 236)",
+    "lead": "rgb(233, 220, 243)",
+    "ul": "rgb(233, 220, 243)",
+    "tag": "rgb(201, 169, 222)"
+  },
+  "overflow_land": {
+    "sw": 420,
+    "cw": 420,
+    "bodyTransform": "matrix(0, 1, -1, 0, 420, 0)"
+  },
+  "overflow_900x420": {
+    "sw": 900,
+    "cw": 900
+  },
+  "pageerrors": []
+}

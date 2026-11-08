@@ -1,0 +1,9 @@
+{
+  "round": "R30",
+  "task": "K 词源笺 10 张 AI 原画",
+  "reference": "/data/inputs/A7B52A80-3570-40B1-9E47-07C1AC84CB3C.jpg (作者原稿三视图)",
+  "base": "anim4/_style_ref.png (正面单只裁切)",
+  "seed": 3,
+  "ratio": "1:1",
+  "status": "generating"
+}

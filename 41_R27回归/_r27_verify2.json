@@ -1,0 +1,43 @@
+{
+  "badKeyDetect": {
+    "scanned": 1,
+    "bad": [
+      {
+        "ns": "view",
+        "key": "beixue_spr_v1",
+        "why": "非 JSON / 已损坏"
+      }
+    ],
+    "ok": false
+  },
+  "viewReset": {
+    "before": 4,
+    "removed": 4,
+    "after": 0
+  },
+  "perfLog": {
+    "before": 6,
+    "after": 8,
+    "types": {
+      "resolve": 7,
+      "perf": 1
+    },
+    "last": {
+      "t": 1794124659051,
+      "type": "perf",
+      "lv": "J",
+      "idx": 0,
+      "art": "cos_shen_calm",
+      "anim": "nod"
+    }
+  },
+  "allLevels": {
+    "count": 24,
+    "bad": []
+  },
+  "archivePages": {
+    "keys": 19,
+    "animLen": 27787
+  },
+  "pageerrors": []
+}

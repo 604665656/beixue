@@ -1,0 +1,19 @@
+候选,类别,官方地址,备注
+Ren'Py,视觉小说引擎,https://github.com/renpy/renpy,主要运行环境为 Python
+WebGAL,Web视觉小说引擎,https://github.com/OpenWebGAL/WebGAL,浏览器目标最接近本项目
+Monogatari,Web视觉小说引擎,https://github.com/Monogatari/Monogatari,JavaScript 运行时
+ink,叙事语言,https://github.com/inkle/ink,核心运行时
+inkjs,ink的JavaScript运行时,https://github.com/y-lohse/inkjs,可在浏览器解释 ink
+Twine,互动小说编辑器,https://github.com/klembot/twinejs,编辑器产物可独立运行
+Yarn Spinner,互动叙事引擎,https://github.com/YarnSpinnerTool/YarnSpinner,面向 Unity/C#
+Fungus,Unity可视化叙事,https://github.com/snozbot/fungus,Unity 编辑器扩展
+Naninovel,Unity视觉小说框架,https://github.com/Naninovel/Naninovel,商业开源框架
+Dialogic,Godot对话插件,https://github.com/dialogic-godot/dialogic,Godot 4 插件
+Zustand,状态管理,https://github.com/pmndrs/zustand,需构建及现代框架环境
+Redux Toolkit,状态管理,https://github.com/reduxjs/redux-toolkit,需构建及现代框架环境
+XState,状态机,https://github.com/statelyai/xstate,可独立运行但需构建
+Web Speech API,W3C TTS/ASR标准,https://wicg.github.io/speech-api/,平台能力而非现成项目
+Confucius4-TTS,开源中文TTS,https://github.com/netease-youdao/Confucius4-TTS,需要模型与运行环境
+sharp,图像转换管线,https://github.com/lovell/sharp,Node.js原生依赖
+Squoosh,图像压缩工具,https://github.com/GoogleChromeLabs/squoosh,WebAssembly/浏览器或构建环境
+ImageMagick,图像处理,https://github.com/ImageMagick/ImageMagick,命令行批处理管线

@@ -1,0 +1,127 @@
+{
+  "title": "杯雪 · 互动游戏集",
+  "DATA": [
+    "meta",
+    "A",
+    "B",
+    "D",
+    "C",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "archiveExtra",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "archive",
+    "readB64",
+    "perf"
+  ],
+  "ART": 229,
+  "STORE": {
+    "schema": 1,
+    "groups": {
+      "progress": 4,
+      "preferences": 13,
+      "view": 4
+    },
+    "check": {
+      "schema": 1,
+      "scanned": 0,
+      "bad": [],
+      "ok": true
+    },
+    "meta": true
+  },
+  "STAGELOG": {
+    "total": 1,
+    "types": {
+      "verify": 1
+    },
+    "last": {
+      "t": 1794124599530,
+      "type": "verify",
+      "tag": "R27"
+    }
+  },
+  "J": {
+    "slots": 10,
+    "allInART": true,
+    "names": [
+      "易敛",
+      "易敛",
+      "易敛",
+      "易敛",
+      "易敛",
+      "易敛",
+      "易敛",
+      "易敛",
+      "易敛",
+      "易敛"
+    ],
+    "fallbackHashi": 0,
+    "stageNow": {
+      "bg": "shulou",
+      "cast": "R26_J_read"
+    }
+  },
+  "AUDIO": {
+    "bgm": null,
+    "sfx": null,
+    "tts": "n/a",
+    "asr": "n/a"
+  },
+  "overflow_portrait": {
+    "sw": 420,
+    "cw": 420
+  },
+  "enter_J": "setTab",
+  "J_stage": {
+    "hasCut": true,
+    "art": "R26_J_read",
+    "who": "易敛 · 展卷细读",
+    "log": {
+      "total": 5,
+      "types": {
+        "verify": 1,
+        "resolve": 4
+      },
+      "last": {
+        "t": 1794124599980,
+        "type": "resolve",
+        "lv": "J",
+        "bg": "shulou",
+        "cast": "R26_J_read"
+      }
+    },
+    "meta": {
+      "cast": "R26_J_read",
+      "name": "易敛",
+      "sub": "易杯酒 · 淮上义军组织者 / 校书郎扮相 · 展卷细读"
+    }
+  },
+  "overflow_land": {
+    "sw": 420,
+    "cw": 420,
+    "bodyTransform": "matrix(0, 1, -1, 0, 420, 0)"
+  },
+  "overflow_900x420": {
+    "sw": 900,
+    "cw": 900
+  },
+  "pageerrors": []
+}
