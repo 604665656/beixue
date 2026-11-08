@@ -83,6 +83,17 @@ if not m:
     raise SystemExit("未找到 DATA JSON 块，构建中止")
 json_text = m.group(2)
 parsed = json.loads(json_text)  # 校验是合法 JSON，避免静默写坏
+
+# 构建期合规裁剪：readB64 是一段 626,796 字符的 base64，解码后为 470,095 B 的
+# 「交互拆读站」内嵌子页面。经 6 个并行探针实测，它是唯一命中 B站 Toy 内容审核
+# 的字段（清空即 published；不清空时连全中文中性化包也被拒）。
+# 只作用于 toy/ 上架产物；源 HTML 与仓库里的完整版仍保留该页。
+if "readB64" in parsed:
+    removed = len(parsed["readB64"])
+    parsed["readB64"] = ""
+    json_text = json.dumps(parsed, ensure_ascii=False, separators=(",", ":"))
+    print("合规裁剪：清空 readB64（原 %d 字符），其余 24 关 / 档案 / 美术全部保留" % removed)
+
 js = (
     "(function(){var e=document.createElement('script');"
     "e.type='application/json';e.id='DATA';"

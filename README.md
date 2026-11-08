@@ -36,17 +36,35 @@ python gen_cover_icon.py   # 生成 deliver/cover.png 与 icon.png
 2. 两个内联 `<style>` → `./style1.css`、`./style2.css`；
 3. 957,972 B 的内联 `<script type="application/json" id="DATA">` → `./data.js`，运行时回填同 id 节点，主脚本里的 `JSON.parse(document.getElementById('DATA').textContent)` **一行都不用改**；
 4. 主脚本 → `./app1.js`；
-5. 入口只剩 3,199 B 的骨架与相对引用，外链 0、根绝对路径 0、残留 base64 0。
+5. 入口只剩 3,199 B 的骨架与相对引用，外链 0、根绝对路径 0、残留 base64 0；
+6. **合规裁剪**：清空数据里的 `readB64` 字段（626,796 字符 base64，解码后为 470,095 B 的「交互拆读站」内嵌子页面）——实测它是唯一命中 B站 Toy 内容审核的内容，见下节。24 关题库、档案、美术与游戏逻辑全部保留。
 
-产物共 244 个文件 / 7,388,125 B，上架 ZIP 6,724,252 B。发布前四道校验：`node --check` 两个 JS、资源引用完整性、`toy_doctor.py` 预检、本地起 `/toy/beixue/` 子路径服务器用真实浏览器确认大厅 → 关卡舞台（场景板 + 立绘 + 对话）全部渲染且资源全 200。
+产物共 244 个文件 / 6,756,779 B，上架 ZIP 6,287,931 B。发布前四道校验：`node --check` 两个 JS、资源引用完整性、`toy_doctor.py` 预检、本地起 `/toy/beixue/` 子路径服务器用真实浏览器确认大厅 → 关卡舞台（场景板 + 立绘 + 对话）全部渲染且资源全 200。
 
 ```bash
 toy create toy --title "杯雪 · 互动游戏集" --slug beixue --category GAME \
   --watermark --poster deliver/cover.png --icon deliver/icon.png --yes --json
 ```
 
+## 内容审核定位（实测）
+
+首轮提交被驳回：`内容审核未通过（违法违规）：app1.js、data.js`，`audit_failures` 含 `{type:content, reason:rejected, risk_category:违法违规}`。审核理由只给泛化文案，所以用**并行探针 + 二元判据**定位，而不是猜词改一整轮：
+
+| 探针 | 变量 | 结果 | 内容关命中 |
+| --- | --- | --- | --- |
+| `bxn0` | 两个文件全部中文等长中性化（CJK → 「文」） | rejected | ✅ 命中 |
+| `bxn1` | 只中性化 `data.js` | rejected | ✅ 命中 |
+| `bxn2` | 只中性化 `app1.js` | rejected | ✅ 命中 |
+| `bxl0` | 站外链接清零 | rejected | ✅ 命中 |
+| `bxr0` | **只清空 `readB64`** | **published** | ❌ 通过 |
+| `bxr1` | 清空 `readB64` + 23 组词面降敏 | **published** | ❌ 通过 |
+
+关键推理：全中文中性化后仍命中 `data.js`，说明触发项**不在可见中文文案里**——`readB64` 是 base64 ASCII 字符串，编码后的中文躲过了中性化。清空它即过审，词面降敏是多余的（`bxr0` 单独就够）。
+
+判据用 `audit_failures` 里有没有 `type:content`，而不是 `status`；因为中性化包的功能关会挂，但内容关已过。这是能在一次审核窗口里读完全部探针结果的关键。
+
 ## 说明
 
-原始资料、美术归档与判废素材均按原样保留，未做删减；合规分包只发生在 `toy/` 产物层。如平台侧内容审核要求调整，也只改构建产物，不动源文件。
+原始资料、美术归档与判废素材均按原样保留，未做删减；分包与合规裁剪只发生在 `toy/` 产物层，**源 HTML 与仓库里的完整版仍保留 `readB64` 子页面**。受影响的只有档案里「拆读站」这一个页签（Toy 版 iframe 为空，代码已有 try/catch，不会中断游戏）；二十四关、七卷、四模式、三档难度、换装台与全部美术均完整。
 
 记录日期：2026-11-08 · Toy CLI v0.6.4

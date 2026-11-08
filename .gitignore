@@ -1,4 +1,6 @@
 _preview/
+probe/
+_probe_build.py
 __pycache__/
 *.pyc
 .DS_Store
