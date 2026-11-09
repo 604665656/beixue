@@ -1,0 +1,21 @@
+
+/* R38：撤除拼接式动画 —— 用户判定「用切片/多帧拼 GIF 很丑」。
+   四层 mask 切分（body/head/ear/tail）与 step-end 帧轮播全部撤下。
+   舞台立绘只用一张完整整图，呼吸由 @keyframes catBreathe 对整张图做
+   translateY + scaleY 整体缓动：不切片、不叠帧、不拼接、不换 background-image。
+   AI 生图不支持动图/GIF，故不生成整帧序列；此为能力边界，已登记在案。 */
+.blayers{position:absolute;inset:0;display:none!important;pointer-events:none}
+html.breath-layers .stage .stagecut{background-image:inherit!important}
+body.no-breathe .stage .stagecut,body.reduce .stage .stagecut,body.hc .stage .stagecut{animation:catIn .4s ease-out both}
+/* 名牌表演小窗：单张整图 + transform 缓动，不再轮播多张帧图 */
+.perficon.ic-nod{animation:onePieceNod .9s ease-in-out 2}
+.perficon.ic-shake{animation:onePieceShake .9s ease-in-out 2}
+.perficon.ic-breath,.perficon.ic-seqbreath{animation:onePieceBreath 1.4s ease-in-out 2}
+.perficon.ic-blink,.perficon.ic-talk,.perficon.ic-tail,.perficon.ic-ear{animation:onePieceBreath 1.2s ease-in-out 2}
+@keyframes onePieceNod{0%,100%{transform:translateY(0) rotate(0)}30%,70%{transform:translateY(2px) rotate(1.5deg)}}
+@keyframes onePieceShake{0%,100%{transform:rotate(0)}25%{transform:rotate(-4deg)}75%{transform:rotate(4deg)}}
+@keyframes onePieceBreath{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+.rippleart{animation:onePieceRipple .3s ease-out both}
+@keyframes onePieceRipple{from{transform:scale(.7);opacity:.85}to{transform:scale(1.5);opacity:0}}
+body.reduce .rippleart,body.reduce .perficon[class*="ic-"],
+body.hc .perficon[class*="ic-"]{animation:none!important}
